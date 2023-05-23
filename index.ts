@@ -12,15 +12,39 @@ const app: Express = express();
 const port = process.env.PORT || 8080;
 
 const jsonParser = bodyParser.json()
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
+const urlencodedParser = bodyParser.urlencoded({extended: false})
+
+declare module 'express-session' {
+  // noinspection JSUnusedGlobalSymbols
+  interface SessionData {
+    user: UserModel;
+  }
+}
 
 app.use(express.static('public'))
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+}));
+
+const auth = (req: Request, res: Response, next: Function) => {
+  if (req.session.user) next()
+  else next('route')
+}
+
 app.get('/', async (req: Request, res: Response) => {
   console.log('GET /');
+
+  if (req.session.user) {
+    console.log(req.session.user)
+  }
+
+  console.log(req.session.user)
 
   res.render('index');
 });
@@ -31,40 +55,7 @@ app.get('/iniciar-sesion', async (req: Request, res: Response) => {
   res.render('iniciaSesion');
 });
 
-app.get('/registrarse', async (req: Request, res: Response) => {
-  console.log('GET /registrarse');
-
-  res.render('registro');
-});
-
-app.post('/registrarse', urlencodedParser, async (req: Request, res: Response) => {
-  console.log('POST /registrarse');
-
-  const body: UserModel = req.body;
-  console.log(body)
-
-  const user: UserModel = await User.createUser(body);
-
-  delete user.password;
-
-  res.send(user);
-});
-
-app.post('/user', jsonParser, async (req: Request, res: Response) => {
-  console.log('POST /user');
-
-  const body: UserModel = req.body;
-
-  const user: UserModel = await User.createUser(body);
-
-  delete user.password;
-
-  res.send(user);
-});
-
-app.post('/login', async (req: Request, res: Response) => {
-  console.log('POST /login');
-
+app.post('/iniciar-sesion', urlencodedParser, async (req: Request, res: Response, next: Function) => {
   const {email, password} = req.body;
 
   const user: UserModel = await User.findUserByEmail(email);
@@ -88,7 +79,37 @@ app.post('/login', async (req: Request, res: Response) => {
 
   delete user.password;
 
-  res.send(user);
+  req.session.regenerate(function (err) {
+    if (err) next(err)
+
+    // store user information in session, typically a user id
+    req.session.user = user
+
+    // save the session before redirection to ensure page
+    // load does not happen before session is saved
+    req.session.save(function (err) {
+      if (err) return next(err)
+      res.redirect('/')
+    })
+  })
+});
+
+app.get('/registrarse', async (req: Request, res: Response) => {
+  console.log('GET /registrarse');
+
+  res.render('registro');
+});
+
+app.post('/registrarse', urlencodedParser, async (req: Request, res: Response) => {
+  console.log('POST /registrarse');
+
+  const body: UserModel = req.body;
+  console.log(body)
+
+  const user: UserModel = await User.createUser(body);
+
+  // Redirect to login
+  res.redirect('/iniciar-sesion');
 });
 
 app.listen(port, () => {
