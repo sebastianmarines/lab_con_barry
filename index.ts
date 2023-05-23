@@ -1,22 +1,56 @@
 import express, {Express, Request, Response} from 'express';
-import { UserModel, User } from './db/models';
 import dotenv from 'dotenv';
 import bcrypt from 'bcrypt';
+import User, {UserModel} from "./db/models/User";
+import {engine} from "express-handlebars";
+import bodyParser from "body-parser";
+import session from "express-session";
 
 dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 8080;
 
-app.use(express.json());
+const jsonParser = bodyParser.json()
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+app.use(express.static('public'))
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views');
 
 app.get('/', async (req: Request, res: Response) => {
   console.log('GET /');
 
-  res.send("User");
+  res.render('index');
 });
 
-app.post('/user', async (req: Request, res: Response) => {
+app.get('/iniciar-sesion', async (req: Request, res: Response) => {
+  console.log('GET /iniciar-sesion');
+
+  res.render('iniciaSesion');
+});
+
+app.get('/registrarse', async (req: Request, res: Response) => {
+  console.log('GET /registrarse');
+
+  res.render('registro');
+});
+
+app.post('/registrarse', urlencodedParser, async (req: Request, res: Response) => {
+  console.log('POST /registrarse');
+
+  const body: UserModel = req.body;
+  console.log(body)
+
+  const user: UserModel = await User.createUser(body);
+
+  delete user.password;
+
+  res.send(user);
+});
+
+app.post('/user', jsonParser, async (req: Request, res: Response) => {
   console.log('POST /user');
 
   const body: UserModel = req.body;
@@ -37,6 +71,11 @@ app.post('/login', async (req: Request, res: Response) => {
 
   if (!user) {
     res.status(404).send('User not found');
+    return;
+  }
+
+  if (!user.password) {
+    res.status(400).send('Password is required');
     return;
   }
 
