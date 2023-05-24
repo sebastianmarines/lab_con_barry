@@ -1,10 +1,13 @@
-import {Module} from '@nestjs/common';
-import {AppController} from './app.controller';
-import {AppService} from './app.service';
-import {ConfigModule} from '@nestjs/config';
-import {KnexModule} from "nest-knexjs";
+import { Module } from '@nestjs/common';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import { KnexModule } from "nest-knexjs";
 import { UsersModule } from './users/users.module';
+import { SessionModule } from 'nestjs-session';
 
+
+// noinspection TypeScriptValidateTypes
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -18,6 +21,13 @@ import { UsersModule } from './users/users.module';
           database: process.env.DB_NAME,
         },
       },
+    }),
+    SessionModule.forRoot({
+      session: {
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false,
+      }
     }),
     UsersModule,
   ],
