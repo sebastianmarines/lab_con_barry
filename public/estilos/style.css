@@ -1,0 +1,28 @@
+.image{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.image-resources{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:540px;
+    height: auto;
+}
+
+.background-nb{
+    background-color: #293e6b;
+    
+}
+
+.img-pequena{
+    width: 30%;
+    display: block;
+    margin: auto;
+}
