@@ -1,0 +1,12 @@
+### Login
+POST http://localhost:3000/users/login
+Content-Type: application/x-www-form-urlencoded
+
+email=a01383056%40tec.mx&password=supersecreto
+
+### Register
+POST http://localhost:3000/users/register
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Sebastian&apellido_paterno=Marines&apellido_materno=Alvarez&email=a01383056%40tec.mx&password=supersecreto
+
