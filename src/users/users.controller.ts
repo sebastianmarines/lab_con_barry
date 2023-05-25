@@ -5,7 +5,8 @@ import { UserLoginDto, UserRegisterDto } from "./user.dto";
 
 @Controller('users')
 export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
+  constructor(private readonly usersService: UsersService) {
+  }
 
   @Get()
   async findAll(): Promise<any> {
@@ -14,7 +15,8 @@ export class UsersController {
 
   @Get('login')
   @Render('users/login')
-  async login(): Promise<any> {}
+  async login(): Promise<any> {
+  }
 
   @Post('login')
   async loginPost(@Res() res, @Body() body: UserLoginDto, @Session() session): Promise<any> {
@@ -37,7 +39,8 @@ export class UsersController {
 
   @Get('register')
   @Render('users/register')
-  async register(): Promise<any> {}
+  async register(): Promise<any> {
+  }
 
   @Post('register')
   async registerPost(@Body() body: UserRegisterDto): Promise<any> {
