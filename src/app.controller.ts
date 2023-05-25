@@ -16,4 +16,10 @@ export class AppController {
   getRecursos(@Res() res, @Session() session) {
     return { user: session.user };
   }
+
+  @Get('videojuego')
+  @Render('videogame')
+  getVideojuego(@Res() res, @Session() session) {
+    return { user: session.user };
+  }
 }
