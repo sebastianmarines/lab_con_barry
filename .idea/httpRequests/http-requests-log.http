@@ -1,0 +1,54 @@
+POST http://localhost:3000/users/login
+Content-Type: application/x-www-form-urlencoded
+
+email=a01383056%40tec.mx&password=supersecreto
+
+<> 2023-05-24T170140.201.html
+
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/x-www-form-urlencoded
+
+email=a01383056%40tec.mx&password=supersecreto
+
+<> 2023-05-24T170113.500.json
+
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/x-www-form-urlencoded
+
+email=sebastian0marines%40gmail.com&password=supersecreto
+
+<> 2023-05-24T170044.404.json
+
+###
+
+POST http://localhost:3000/users/register
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Sebastian&apellido_paterno=Marines&apellido_materno=Alvarez&email=a01383056%40tec.mx&password=supersecreto
+
+<> 2023-05-24T170026.201.json
+
+###
+
+POST http://localhost:3000/users/register
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Sebastian&apellido_paterno=Marines&apellido_materno=Alvarez&email=a01383056%40tec.mx&password=supersecreto
+
+<> 2023-05-24T165827.500.json
+
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/x-www-form-urlencoded
+
+email=sebastian0marines%40gmail.com&password=popo1234
+
+<> 2023-05-24T165708.404.json
+
+###
+
