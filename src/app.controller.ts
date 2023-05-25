@@ -1,4 +1,4 @@
-import { Controller, Get, Render, Res, Session, SetMetadata } from '@nestjs/common';
+import { Controller, Get, Render, Res, Session } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()

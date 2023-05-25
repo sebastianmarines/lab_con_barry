@@ -1,12 +1,20 @@
-import { Body, Controller, Get, HttpException, Post, Render, Res, Session } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpException,
+  Post,
+  Render,
+  Res,
+  Session,
+} from '@nestjs/common';
 import { UsersService } from './users.service';
-import * as bcrypt from "bcrypt";
-import { UserLoginDto, UserRegisterDto } from "./user.dto";
+import * as bcrypt from 'bcrypt';
+import { UserLoginDto, UserRegisterDto } from './user.dto';
 
 @Controller('users')
 export class UsersController {
-  constructor(private readonly usersService: UsersService) {
-  }
+  constructor(private readonly usersService: UsersService) {}
 
   @Get()
   async findAll(): Promise<any> {
@@ -16,10 +24,15 @@ export class UsersController {
   @Get('login')
   @Render('users/login')
   async login(): Promise<any> {
+    return {};
   }
 
   @Post('login')
-  async loginPost(@Res() res, @Body() body: UserLoginDto, @Session() session): Promise<any> {
+  async loginPost(
+    @Res() res,
+    @Body() body: UserLoginDto,
+    @Session() session,
+  ): Promise<any> {
     const user = await this.usersService.findUserByEmail(body.email);
 
     if (!user) {
@@ -40,6 +53,7 @@ export class UsersController {
   @Get('register')
   @Render('users/register')
   async register(): Promise<any> {
+    return {};
   }
 
   @Post('register')

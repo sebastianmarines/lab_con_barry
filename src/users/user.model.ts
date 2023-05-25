@@ -3,7 +3,7 @@ export interface UserBase {
   password?: string;
 }
 
-export interface User extends UserBase{
+export interface User extends UserBase {
   id?: number;
   nombre: string;
   apellido_paterno: string;

@@ -2,10 +2,9 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
-import { KnexModule } from "nest-knexjs";
+import { KnexModule } from 'nest-knexjs';
 import { UsersModule } from './users/users.module';
 import { SessionModule } from 'nestjs-session';
-
 
 // noinspection TypeScriptValidateTypes
 @Module({
@@ -27,12 +26,11 @@ import { SessionModule } from 'nestjs-session';
         secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false,
-      }
+      },
     }),
     UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {
-}
+export class AppModule {}

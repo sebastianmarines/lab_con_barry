@@ -1,7 +1,7 @@
 import { IsString, IsEmail } from 'class-validator';
-import { User, UserBase } from "./user.model";
+import { User, UserBase } from './user.model';
 
-export class UserLoginDto implements UserBase{
+export class UserLoginDto implements UserBase {
   @IsEmail()
   email: string;
 
@@ -26,4 +26,3 @@ export class UserRegisterDto implements User {
   @IsString()
   apellido_materno: string;
 }
-

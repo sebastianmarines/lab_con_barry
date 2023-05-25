@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Knex } from 'knex';
-import { InjectConnection } from "nest-knexjs";
-import { User } from "./user.model";
+import { InjectConnection } from 'nest-knexjs';
+import { User } from './user.model';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()
@@ -15,7 +15,7 @@ export class UsersService {
   }
 
   async findUserByEmail(email: string): Promise<User> {
-    return this.knex(this.tableName).where({email}).first();
+    return this.knex(this.tableName).where({ email }).first();
   }
 
   async createUser(user: User): Promise<User> {
@@ -23,7 +23,6 @@ export class UsersService {
 
     const [id] = await this.knex<User>(this.tableName).insert(user);
 
-    return {...user, id};
+    return { ...user, id };
   }
-
 }
