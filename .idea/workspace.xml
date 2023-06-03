@@ -8,12 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f2af50a-63ba-4a64-a91d-30abdb8bc2ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sql/main.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/videogame.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7191e788-5e41-4343-817f-e3507f5d7b10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7191e788-5e41-4343-817f-e3507f5d7b10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.controller.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/IMG/emergencias.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/IMG/emergencias.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/main.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/main.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/partials/navbar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/recursos.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/recursos.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/videogame.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/videogame.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +33,7 @@
         <option value="HTTP Request" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTTP Public Environment File" />
       </list>
     </option>
   </component>
@@ -45,12 +52,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/nest-migration" />
-                    <option name="lastUsedInstant" value="1684955327" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1684983498" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1684955326" />
+                    <option name="branchName" value="feature/nest-migration" />
+                    <option name="lastUsedInstant" value="1684955327" />
                   </RecentBranch>
                 </list>
               </option>
@@ -71,7 +78,7 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2QAyfXfV82ZSEcgeNAxRYFkO2di" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -85,7 +92,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/nest-migration&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/sebastianmarines/Projects/tec/lab_con_barry&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -97,7 +104,7 @@
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/sebastianmarines/Projects/tec/lab_con_barry/node_modules/prettier&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/sebastianmarines/Projects/tec/lab_con_barry/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -116,14 +123,11 @@
       <recent name="$PROJECT_DIR$/db/User.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js..eslintrc.js">
+  <component name="RunManager" selected="npm.start:dev">
     <configuration name="user | Login" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http_tests/user.http" requestIdentifier="Login" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="user | Register" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http_tests/user.http" index="2" requestIdentifier="Register" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="user_create | Create user" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/tests/user_create.http" requestIdentifier="Create user" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="user_create | Login" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/tests/user_create.http" index="2" requestIdentifier="Login" runType="Run single request">
@@ -132,13 +136,23 @@
     <configuration name=".eslintrc.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/.eslintrc.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
+    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js..eslintrc.js" />
+        <item itemvalue="npm.start:dev" />
         <item itemvalue="HTTP Request.user | Login" />
+        <item itemvalue="Node.js..eslintrc.js" />
         <item itemvalue="HTTP Request.user | Register" />
         <item itemvalue="HTTP Request.user_create | Login" />
-        <item itemvalue="HTTP Request.user_create | Create user" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +171,9 @@
       <workItem from="1684978494638" duration="76000" />
       <workItem from="1684978577901" duration="1204000" />
       <workItem from="1684979850619" duration="34000" />
-      <workItem from="1684979891545" duration="1923000" />
+      <workItem from="1684979891545" duration="6717000" />
+      <workItem from="1685410413742" duration="21000" />
+      <workItem from="1685767159884" duration="1665000" />
     </task>
     <task id="LOCAL-00001" summary="Connect DB">
       <created>1684854873575</created>
@@ -183,6 +199,17 @@
         <option value="$PROJECT_DIR$/db/connect.js" />
         <option value="$PROJECT_DIR$/db/models/User.js" />
       </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">

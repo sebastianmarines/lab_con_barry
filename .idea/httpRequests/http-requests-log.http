@@ -1,3 +1,30 @@
+# @no-redirect
+POST http://localhost:3000/users/login
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 46
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+email=a01383056%40tec.mx&password=supersecreto
+
+<> 2023-05-24T234337.302.txt
+
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: connect.sid=s%3AdCdMMWx8C8p_LsSMM6ON5AvyEGVXO5xm.OYLZ19jrtB26ofzRuVG%2BCscE0xp9HmJFtbyr3s9JlzI
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+email=a01383056%40tec.mx&password=supersecreto
+
+<> 2023-05-24T234302.200.html
+
+###
+
 POST http://localhost:3000/users/login
 Content-Type: application/x-www-form-urlencoded
 

@@ -11,7 +11,7 @@ CREATE TABLE dbo.herramientas
     apellidom_encargado varchar(50)                               NOT NULL,
     inventario          int                                       NOT NULL,
     agenda              varchar(50)                               NOT NULL,
-    certificado_id      int,
+    certificado_id      int, -- TODO
     FOREIGN KEY (certificado_id) REFERENCES dbo.certificados (id)
 )
 
