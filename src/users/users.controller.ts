@@ -3,6 +3,7 @@ import {
   Controller,
   Get,
   HttpException,
+  Logger,
   Post,
   Render,
   Res,
@@ -14,6 +15,8 @@ import { UserLoginDto, UserRegisterDto } from './user.dto';
 
 @Controller('users')
 export class UsersController {
+  private readonly logger = new Logger(UsersController.name);
+
   constructor(private readonly usersService: UsersService) {}
 
   @Get()
@@ -53,6 +56,33 @@ export class UsersController {
     session.user = user;
 
     return res.redirect('/');
+  }
+
+  @Post('/api/login')
+  async loginPostApi(
+    @Body() body: UserLoginDto,
+    @Session() session,
+  ): Promise<any> {
+    const user = await this.usersService.findUserByEmail(
+      body.CorreoElectronico,
+    );
+
+    if (!user) {
+      throw new HttpException('Usuario no encontrado', 404);
+    }
+
+    const isPasswordValid = await bcrypt.compare(
+      body.Contrasena,
+      user.Contrasena,
+    );
+
+    if (!isPasswordValid) {
+      throw new HttpException('Contraseña incorrecta', 401);
+    }
+
+    session.user = user;
+
+    return '';
   }
 
   @Get('register')

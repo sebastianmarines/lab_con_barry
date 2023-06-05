@@ -1,13 +1,16 @@
-import { Controller, Get, Render, Res, Session } from '@nestjs/common';
+import { Controller, Get, Logger, Render, Res, Session } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
+  private readonly logger = new Logger(AppController.name);
+
   constructor(private readonly appService: AppService) {}
 
   @Get()
   @Render('index')
   getHello(@Res() res, @Session() session) {
+    this.logger.log(`session: ${session.user?.Nombre}`);
     return { user: session.user };
   }
 

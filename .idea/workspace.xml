@@ -8,18 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f2af50a-63ba-4a64-a91d-30abdb8bc2ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7191e788-5e41-4343-817f-e3507f5d7b10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7191e788-5e41-4343-817f-e3507f5d7b10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7191e788-5e41-4343-817f-e3507f5d7b10/storage_v2/_src_/database/reto.7ls1AA/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7191e788-5e41-4343-817f-e3507f5d7b10/storage_v2/_src_/database/reto.7ls1AA/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/main.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/main.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users/user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/user.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/users.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/users.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/login.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/register.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/register.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/videogame.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/videogame.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +169,7 @@
       <workItem from="1685767159884" duration="5109000" />
       <workItem from="1685932842406" duration="490000" />
       <workItem from="1685933340917" duration="215000" />
-      <workItem from="1685933564484" duration="1646000" />
+      <workItem from="1685933564484" duration="4740000" />
     </task>
     <task id="LOCAL-00001" summary="Connect DB">
       <created>1684854873575</created>
@@ -200,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685769562307</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fix database fields">
+      <created>1685935311996</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685935311997</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix database fields">
+      <created>1685935327873</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685935327873</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,9 +230,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Connect DB" />
     <MESSAGE value="Create login" />
     <MESSAGE value="WIP" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP" />
+    <MESSAGE value="Fix database fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix database fields" />
   </component>
 </project>
