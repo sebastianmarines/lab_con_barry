@@ -13,12 +13,7 @@ create table Alumno
     Contrasena        VARCHAR(100),
     CorreoElectronico VARCHAR(100),
     Activo            bit,
---     ID_Certificado    INT FOREIGN KEY REFERENCES Certificado (ID_Certificado)
 );
-
-INSERT INTO Alumnos (Matricula, Nombre, ApPaterno, Contrasena, CorreoElectronico, Activo)
-VALUES ('A01234567', 'Timotheé', 'Chalamet', '123456', 'a01234567@tec.mx', 1);
-
 
 
 create table Certificado
@@ -27,6 +22,9 @@ create table Certificado
     FechaDeCreacion DATETIME,
     Calificacion    INT
 );
+
+alter table Alumno
+    add ID_Certificado INT FOREIGN KEY REFERENCES Certificado (ID_Certificado);
 
 
 create table Herramientas
@@ -44,7 +42,7 @@ CREATE TABLE Reserva_Herramientas
 (
     Matricula          VARCHAR(15),
     ID_Herramienta     INT,
-    Estatus_activo     BOOLEAN,
+    Estatus_activo     bit,
     Fecha_hora_reserva DATETIME,
     Fecha_hora_regreso DATETIME,
     Cantidad           INT,
