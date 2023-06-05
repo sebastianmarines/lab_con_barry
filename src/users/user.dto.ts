@@ -1,28 +1,31 @@
-import { IsString, IsEmail } from 'class-validator';
+import { IsEmail, IsString } from 'class-validator';
 import { User, UserBase } from './user.model';
 
 export class UserLoginDto implements UserBase {
   @IsEmail()
-  email: string;
+  CorreoElectronico: string;
 
   @IsString()
-  password: string;
+  Contrasena: string;
 }
 
 export class UserRegisterDto implements User {
   @IsEmail()
   // TODO: Validar que el email sea @tec.mx
-  email: string;
+  CorreoElectronico: string;
 
   @IsString()
-  password: string;
+  Contrasena: string;
 
   @IsString()
-  nombre: string;
+  Nombre: string;
 
   @IsString()
-  apellido_paterno: string;
+  ApellidoPaterno: string;
 
   @IsString()
-  apellido_materno: string;
+  ApellidoMaterno: string;
+
+  @IsString()
+  Matricula: string;
 }

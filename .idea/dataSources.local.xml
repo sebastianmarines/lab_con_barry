@@ -11,7 +11,9 @@
       <user-name>sa</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="@">
+          <node kind="database">
+            <name qname="@" />
+            <name qname="LabConBarry" />
             <node kind="schema" qname="@" />
           </node>
         </introspection-scope>

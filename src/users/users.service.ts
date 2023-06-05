@@ -6,7 +6,7 @@ import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersService {
-  private readonly tableName = 'usuarios';
+  private readonly tableName = 'Alumno';
 
   constructor(@InjectConnection() private readonly knex: Knex) {}
 
@@ -14,15 +14,15 @@ export class UsersService {
     return this.knex(this.tableName).select('*');
   }
 
-  async findUserByEmail(email: string): Promise<User> {
-    return this.knex(this.tableName).where({ email }).first();
+  async findUserByEmail(CorreoElectronico: string): Promise<User> {
+    return this.knex(this.tableName).where({ CorreoElectronico }).first();
   }
 
   async createUser(user: User): Promise<User> {
-    user.password = await bcrypt.hash(user.password, 10);
+    user.Contrasena = await bcrypt.hash(user.Contrasena, 10);
 
-    const [id] = await this.knex<User>(this.tableName).insert(user);
+    const [ID] = await this.knex<User>(this.tableName).insert(user);
 
-    return { ...user, id };
+    return { ...user, ID };
   }
 }

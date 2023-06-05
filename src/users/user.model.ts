@@ -1,11 +1,13 @@
 export interface UserBase {
-  email: string;
-  password?: string;
+  CorreoElectronico: string;
+  Contrasena?: string;
 }
 
 export interface User extends UserBase {
-  id?: number;
-  nombre: string;
-  apellido_paterno: string;
-  apellido_materno: string;
+  ID?: number;
+  Matricula?: string;
+  Nombre?: string;
+  ApellidoPaterno?: string;
+  ApellidoMaterno?: string;
+  Activo?: boolean;
 }

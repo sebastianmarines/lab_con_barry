@@ -33,13 +33,18 @@ export class UsersController {
     @Body() body: UserLoginDto,
     @Session() session,
   ): Promise<any> {
-    const user = await this.usersService.findUserByEmail(body.email);
+    const user = await this.usersService.findUserByEmail(
+      body.CorreoElectronico,
+    );
 
     if (!user) {
       throw new HttpException('Usuario no encontrado', 404);
     }
 
-    const isPasswordValid = await bcrypt.compare(body.password, user.password);
+    const isPasswordValid = await bcrypt.compare(
+      body.Contrasena,
+      user.Contrasena,
+    );
 
     if (!isPasswordValid) {
       throw new HttpException('Contraseña incorrecta', 401);
@@ -58,14 +63,16 @@ export class UsersController {
 
   @Post('register')
   async registerPost(@Body() body: UserRegisterDto): Promise<any> {
-    const user = await this.usersService.findUserByEmail(body.email);
+    const user = await this.usersService.findUserByEmail(
+      body.CorreoElectronico,
+    );
 
     if (user) {
       throw new HttpException('El usuario ya existe', 409);
     }
 
     const _user = await this.usersService.createUser(body);
-    delete _user.password;
+    delete _user.Contrasena;
 
     return _user;
   }

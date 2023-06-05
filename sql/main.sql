@@ -1,46 +1,67 @@
-CREATE DATABASE reto;
+CREATE DATABASE LabConBarry;
 
-USE reto;
+USE LabConBarry;
 
-CREATE TABLE dbo.herramientas
+
+create table Alumno
 (
-    id                  int IDENTITY (1, 1) PRIMARY KEY CLUSTERED NOT NULL,
-    nombre              varchar(50)                               NOT NULL,
-    nombre_encargado    varchar(50)                               NOT NULL,
-    apellidop_encargado varchar(50)                               NOT NULL,
-    apellidom_encargado varchar(50)                               NOT NULL,
-    inventario          int                                       NOT NULL,
-    agenda              varchar(50)                               NOT NULL,
-    certificado_id      int, -- TODO
-    FOREIGN KEY (certificado_id) REFERENCES dbo.certificados (id)
-)
+    ID                INT IDENTITY PRIMARY KEY NOT NULL,
+    Matricula         VARCHAR(15)              NOT NULL,
+    Nombre            VARCHAR(50)              NOT NULL,
+    ApellidoPaterno   VARCHAR(25),
+    ApellidoMaterno   VARCHAR(25),
+    Contrasena        VARCHAR(100),
+    CorreoElectronico VARCHAR(100),
+    Activo            bit,
+--     ID_Certificado    INT FOREIGN KEY REFERENCES Certificado (ID_Certificado)
+);
 
-CREATE TABLE dbo.usuarios
+INSERT INTO Alumnos (Matricula, Nombre, ApPaterno, Contrasena, CorreoElectronico, Activo)
+VALUES ('A01234567', 'Timotheé', 'Chalamet', '123456', 'a01234567@tec.mx', 1);
+
+
+
+create table Certificado
 (
-    id               int IDENTITY (1, 1) PRIMARY KEY CLUSTERED NOT NULL,
-    nombre           VARCHAR(50)                               NOT NULL,
-    apellido_paterno VARCHAR(50)                               NOT NULL,
-    apellido_materno VARCHAR(50)                               NOT NULL,
-    email            varchar(50)                               NOT NULL,
-    password         VARCHAR(500)                              NOT NULL
-)
-CREATE INDEX usuario_email_index
-    ON dbo.usuarios (email)
+    ID_Certificado  INT IDENTITY PRIMARY KEY NOT NULL,
+    FechaDeCreacion DATETIME,
+    Calificacion    INT
+);
 
-CREATE TABLE dbo.certificados
+
+create table Herramientas
 (
-    id           int IDENTITY (1, 1) PRIMARY KEY CLUSTERED NOT NULL,
-    fecha        DATE                                      NOT NULL,
-    calificacion int                                       NOT NULL,
-    usuario_id   int                                       NOT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES dbo.usuarios (id)
-)
+    ID_Herramienta      INT IDENTITY PRIMARY KEY NOT NULL,
+    Nombre              VARCHAR(100)             NOT NULL,
+    Nombre_encargado    VARCHAR(50),
+    ApPaterno_encargado VARCHAR(25),
+    ApMaterno_encargado VARCHAR(25),
+    Inventario          INT                      NOT NULL
+);
 
-SELECT TOP 1 *
-FROM dbo.usuarios;
 
-INSERT INTO dbo.certificados (fecha, calificacion, usuario_id)
-VALUES ('2020-01-01', 10, 12);
+CREATE TABLE Reserva_Herramientas
+(
+    Matricula          VARCHAR(15),
+    ID_Herramienta     INT,
+    Estatus_activo     BOOLEAN,
+    Fecha_hora_reserva DATETIME,
+    Fecha_hora_regreso DATETIME,
+    Cantidad           INT,
+    PRIMARY KEY (Matricula, ID_Herramienta),
+    FOREIGN KEY (Matricula) REFERENCES Alumno (Matricula),
+    FOREIGN KEY (ID_Herramienta) REFERENCES Herramientas (ID_Herramienta)
+);
 
-SELECT TOP 1 *
-FROM dbo.certificados;
+
+CREATE TABLE Alumnos_Herramientas
+(
+    Matricula          VARCHAR(15),
+    ID_Herramienta     INT,
+    Fecha_hora_pedido  DATETIME,
+    Fecha_hora_regreso DATETIME,
+    Cantidad           INT,
+    PRIMARY KEY (Matricula, ID_Herramienta),
+    FOREIGN KEY (Matricula) REFERENCES Alumno (Matricula),
+    FOREIGN KEY (ID_Herramienta) REFERENCES Herramientas (ID_Herramienta)
+);
