@@ -15,6 +15,9 @@ create table Alumno
     Activo            bit,
 );
 
+alter table Alumno
+    add constraint UQ_Matricula unique (Matricula);
+
 
 create table Certificado
 (
@@ -27,7 +30,7 @@ alter table Alumno
     add ID_Certificado INT FOREIGN KEY REFERENCES Certificado (ID_Certificado);
 
 
-create table Herramientas
+create table Herramienta
 (
     ID_Herramienta      INT IDENTITY PRIMARY KEY NOT NULL,
     Nombre              VARCHAR(100)             NOT NULL,
@@ -37,8 +40,15 @@ create table Herramientas
     Inventario          INT                      NOT NULL
 );
 
+INSERT INTO Herramienta (Nombre, Nombre_encargado, ApPaterno_encargado, ApMaterno_encargado, Inventario)
+VALUES ('Martillo', 'Juan', 'Perez', 'Garcia', 10),
+       ('Desarmador', 'Pedro', 'Gonzalez', 'Garcia', 10),
+       ('Pinzas', 'Luis', 'Garcia', 'Garcia', 10),
+       ('Cinta Metrica', 'Jose', 'Garcia', 'Garcia', 10),
+       ('Cautin', 'Ricardo', 'Garcia', 'Garcia', 10);
 
-CREATE TABLE Reserva_Herramientas
+
+CREATE TABLE Reserva
 (
     Matricula          VARCHAR(15),
     ID_Herramienta     INT,
@@ -48,9 +58,11 @@ CREATE TABLE Reserva_Herramientas
     Cantidad           INT,
     PRIMARY KEY (Matricula, ID_Herramienta),
     FOREIGN KEY (Matricula) REFERENCES Alumno (Matricula),
-    FOREIGN KEY (ID_Herramienta) REFERENCES Herramientas (ID_Herramienta)
+    FOREIGN KEY (ID_Herramienta) REFERENCES Herramienta (ID_Herramienta)
 );
 
+INSERT INTO Reserva (Matricula, ID_Herramienta, Estatus_activo, Fecha_hora_reserva, Fecha_hora_regreso, Cantidad)
+VALUES ('A01383056', 1, 1, '2023-06-05 10:00:00', '2023-06-06 11:00:00', 1);
 
 CREATE TABLE Alumnos_Herramientas
 (
@@ -61,5 +73,5 @@ CREATE TABLE Alumnos_Herramientas
     Cantidad           INT,
     PRIMARY KEY (Matricula, ID_Herramienta),
     FOREIGN KEY (Matricula) REFERENCES Alumno (Matricula),
-    FOREIGN KEY (ID_Herramienta) REFERENCES Herramientas (ID_Herramienta)
+    FOREIGN KEY (ID_Herramienta) REFERENCES Herramienta (ID_Herramienta)
 );
