@@ -7,21 +7,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="/">Inicio
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/videojuego">Videojuego</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/recursos">Recursos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Certificado</a>
-        </li>
         {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Inicio
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/recursos">Recursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/videojuego">Videojuego</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Certificado</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle show" data-bs-toggle="dropdown" href="#" role="button"
                aria-haspopup="true" aria-expanded="true">Cuenta</a>
@@ -31,8 +31,12 @@
             </div>
           </li>
         {{else}}
-        <li class="nav-item">
-          <a class="nav-link" href="/users/login">Iniciar Sesión</a>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/login">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/register">¡Regístrate!</a>
+          </li>
         {{/if}}
       </ul>
     </div>
