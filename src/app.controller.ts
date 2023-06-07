@@ -25,4 +25,10 @@ export class AppController {
   getVideojuego(@Res() res, @Session() session) {
     return { user: session.user };
   }
+
+  @Get('play')
+  @Render('videojuego_frame')
+  getPlay(@Res() res, @Session() session) {
+    return { user: session.user };
+  }
 }

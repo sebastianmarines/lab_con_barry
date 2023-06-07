@@ -3,18 +3,37 @@
     margin-bottom: 20px;
 }
 
+.blue-text{
+    color:#1b2743;
+    font-family: 'Comic Neue', cursive;
+}
+
+.imagen-principal{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.imagen-recursos{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.imagen-centrada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .text{
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.image-resources{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width:540px;
-    height: auto;
-}
 
 .background-nb{
     background-color: #293e6b;
@@ -25,4 +44,19 @@
     width: 30%;
     display: block;
     margin: auto;
+}
+
+.fondo-pp{
+background-color: #fdfcf3;
+}
+
+.borde-recursos{
+    border: 20px solid #FF9600;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.imagen-curva {
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    width: 100%;
 }

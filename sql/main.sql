@@ -64,6 +64,8 @@ CREATE TABLE Reserva
 INSERT INTO Reserva (Matricula, ID_Herramienta, Estatus_activo, Fecha_hora_reserva, Fecha_hora_regreso, Cantidad)
 VALUES ('A01383056', 1, 1, '2023-06-05 10:00:00', '2023-06-06 11:00:00', 1);
 
+SELECT * FROM Reserva WHERE
+
 CREATE TABLE Alumnos_Herramientas
 (
     Matricula          VARCHAR(15),
