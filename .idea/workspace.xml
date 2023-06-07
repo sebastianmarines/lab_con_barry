@@ -8,14 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f2af50a-63ba-4a64-a91d-30abdb8bc2ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/views/certificate.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/main.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/main.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/navbar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/register.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/register.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +171,7 @@
       <workItem from="1685767159884" duration="5109000" />
       <workItem from="1685932842406" duration="490000" />
       <workItem from="1685933340917" duration="215000" />
-      <workItem from="1685933564484" duration="18033000" />
+      <workItem from="1685933564484" duration="18151000" />
     </task>
     <task id="LOCAL-00001" summary="Connect DB">
       <created>1684854873575</created>
@@ -243,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686059481439</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Create certificate">
+      <created>1686175587592</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686175587592</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +287,7 @@
     <MESSAGE value="Update `.env.example`" />
     <MESSAGE value="Update UI" />
     <MESSAGE value="Create missing tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create missing tables" />
+    <MESSAGE value="Create certificate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create certificate" />
   </component>
 </project>
