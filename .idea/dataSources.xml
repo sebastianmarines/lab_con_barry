@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:sqlserver://localhost;database=reto</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="@labconbarry.cx6nwk8y1imp.us-east-1.rds.amazonaws.com" uuid="d608e186-2c47-42d9-ad16-8e1eff1342fc">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://labconbarry.cx6nwk8y1imp.us-east-1.rds.amazonaws.com:1433</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

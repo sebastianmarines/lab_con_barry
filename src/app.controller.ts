@@ -31,4 +31,10 @@ export class AppController {
   getPlay(@Res() res, @Session() session) {
     return { user: session.user };
   }
+
+  @Get('certificado')
+  @Render('certificate')
+  getCertificado(@Res() res, @Session() session) {
+    return { user: session.user };
+  }
 }
