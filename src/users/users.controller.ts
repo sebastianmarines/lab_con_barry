@@ -92,7 +92,7 @@ export class UsersController {
   }
 
   @Post('register')
-  async registerPost(@Body() body: UserRegisterDto): Promise<any> {
+  async registerPost(@Res() res, @Body() body: UserRegisterDto): Promise<any> {
     const user = await this.usersService.findUserByEmail(
       body.CorreoElectronico,
     );
@@ -104,6 +104,6 @@ export class UsersController {
     const _user = await this.usersService.createUser(body);
     delete _user.Contrasena;
 
-    return _user;
+    return res.redirect('/users/login');
   }
 }

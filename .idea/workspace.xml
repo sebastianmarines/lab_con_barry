@@ -8,6 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f2af50a-63ba-4a64-a91d-30abdb8bc2ed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/users.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/navbar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/register.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/register.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +174,7 @@
       <workItem from="1685767159884" duration="5109000" />
       <workItem from="1685932842406" duration="490000" />
       <workItem from="1685933340917" duration="215000" />
-      <workItem from="1685933564484" duration="18151000" />
+      <workItem from="1685933564484" duration="18587000" />
     </task>
     <task id="LOCAL-00001" summary="Connect DB">
       <created>1684854873575</created>
@@ -243,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686175587592</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fix forms">
+      <created>1686175704347</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686175704347</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +298,7 @@
     <MESSAGE value="Update UI" />
     <MESSAGE value="Create missing tables" />
     <MESSAGE value="Create certificate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create certificate" />
+    <MESSAGE value="Fix forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix forms" />
   </component>
 </project>
