@@ -16871,7 +16871,7 @@
     </schema>
     <schema id="5573" parent="5510" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-06-06.07:47:57.850</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-06-10.14:57:42.583</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="5574" parent="5510" name="guest">
@@ -16990,7 +16990,7 @@
     </schema>
     <schema id="5600" parent="5515" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-06-06.07:47:57.873</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-06-10.14:57:42.610</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="5601" parent="5515" name="guest">
@@ -17001,7 +17001,7 @@
     </schema>
     <table id="5603" parent="5573" name="Alumno">
       <CreatedTimestamp>2023-06-04.20:30:13.087</CreatedTimestamp>
-      <ModifiedTimestamp>2023-06-06.07:47:57.660</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-06-10.14:57:42.323</ModifiedTimestamp>
       <ObjectId>901578250</ObjectId>
     </table>
     <table id="5604" parent="5573" name="Certificado">
@@ -17011,19 +17011,19 @@
     </table>
     <table id="5605" parent="5573" name="Herramienta">
       <CreatedTimestamp>2023-06-06.07:44:30.107</CreatedTimestamp>
-      <ModifiedTimestamp>2023-06-06.07:47:57.663</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-06-10.14:57:42.327</ModifiedTimestamp>
       <ObjectId>981578535</ObjectId>
     </table>
     <table id="5606" parent="5573" name="Reserva">
-      <CreatedTimestamp>2023-06-06.07:47:57.653</CreatedTimestamp>
-      <ModifiedTimestamp>2023-06-06.07:47:57.653</ModifiedTimestamp>
-      <ObjectId>1077578877</ObjectId>
+      <CreatedTimestamp>2023-06-10.14:57:42.303</CreatedTimestamp>
+      <ModifiedTimestamp>2023-06-10.14:57:42.303</ModifiedTimestamp>
+      <ObjectId>1157579162</ObjectId>
     </table>
     <column id="5607" parent="5603" name="ID">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1(4)</SequenceIdentity>
+      <SequenceIdentity>1(7)</SequenceIdentity>
     </column>
     <column id="5608" parent="5603" name="Matricula">
       <DasType>varchar(15 char)|0s</DasType>
@@ -17099,7 +17099,7 @@
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(2)</SequenceIdentity>
     </column>
     <column id="5622" parent="5604" name="FechaDeCreacion">
       <DasType>datetime|0s</DasType>
@@ -17167,67 +17167,70 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__Herramie__019BDC2FE4DFACD0</UnderlyingIndexName>
     </key>
-    <column id="5634" parent="5606" name="Matricula">
-      <DasType>varchar(15 char)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="5635" parent="5606" name="ID_Herramienta">
+    <column id="5634" parent="5606" name="ID">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="5635" parent="5606" name="Matricula">
+      <DasType>varchar(15 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5636" parent="5606" name="Estatus_activo">
-      <DasType>bit|0s</DasType>
+    <column id="5636" parent="5606" name="ID_Herramienta">
+      <DasType>int|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5637" parent="5606" name="Fecha_hora_reserva">
-      <DasType>datetime|0s</DasType>
+    <column id="5637" parent="5606" name="Estatus_activo">
+      <DasType>bit|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5638" parent="5606" name="Fecha_hora_regreso">
+    <column id="5638" parent="5606" name="Fecha_hora_reserva">
       <DasType>datetime|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5639" parent="5606" name="Cantidad">
-      <DasType>int|0s</DasType>
+    <column id="5639" parent="5606" name="Fecha_hora_regreso">
+      <DasType>datetime|0s</DasType>
       <Position>6</Position>
     </column>
-    <foreign-key id="5640" parent="5606" name="FK__Reserva__Matricu__4222D4EF">
+    <column id="5640" parent="5606" name="Cantidad">
+      <DasType>int|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <foreign-key id="5641" parent="5606" name="FK__Reserva__Matricu__46E78A0C">
       <ColNames>Matricula</ColNames>
-      <CreatedTimestamp>2023-06-06.07:47:57.660</CreatedTimestamp>
-      <ModifiedTimestamp>2023-06-06.07:47:57.660</ModifiedTimestamp>
+      <CreatedTimestamp>2023-06-10.14:57:42.323</CreatedTimestamp>
+      <ModifiedTimestamp>2023-06-10.14:57:42.323</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1109578991</ObjectId>
+      <ObjectId>1189579276</ObjectId>
       <RefColNames>Matricula</RefColNames>
       <RefTableId>901578250</RefTableId>
       <RefTableName>Alumno</RefTableName>
     </foreign-key>
-    <foreign-key id="5641" parent="5606" name="FK__Reserva__ID_Herr__4316F928">
+    <foreign-key id="5642" parent="5606" name="FK__Reserva__ID_Herr__47DBAE45">
       <ColNames>ID_Herramienta</ColNames>
-      <CreatedTimestamp>2023-06-06.07:47:57.660</CreatedTimestamp>
-      <ModifiedTimestamp>2023-06-06.07:47:57.660</ModifiedTimestamp>
+      <CreatedTimestamp>2023-06-10.14:57:42.323</CreatedTimestamp>
+      <ModifiedTimestamp>2023-06-10.14:57:42.323</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1125579048</ObjectId>
+      <ObjectId>1205579333</ObjectId>
       <RefColNames>ID_Herramienta</RefColNames>
       <RefTableId>981578535</RefTableId>
       <RefTableName>Herramienta</RefTableName>
     </foreign-key>
-    <index id="5642" parent="5606" name="PK__Reserva__EFA0468C4BCFAC03">
+    <index id="5643" parent="5606" name="PK__Reserva__3214EC27849329B3">
       <Clustering>1</Clustering>
-      <ColNames>Matricula
-ID_Herramienta</ColNames>
+      <ColNames>ID</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5643" parent="5606" name="PK__Reserva__EFA0468C4BCFAC03">
-      <CreatedTimestamp>2023-06-06.07:47:57.660</CreatedTimestamp>
-      <ModifiedTimestamp>2023-06-06.07:47:57.660</ModifiedTimestamp>
+    <key id="5644" parent="5606" name="PK__Reserva__3214EC27849329B3">
+      <CreatedTimestamp>2023-06-10.14:57:42.320</CreatedTimestamp>
+      <ModifiedTimestamp>2023-06-10.14:57:42.320</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1093578934</ObjectId>
+      <ObjectId>1173579219</ObjectId>
       <Primary>1</Primary>
-      <UnderlyingIndexName>PK__Reserva__EFA0468C4BCFAC03</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__Reserva__3214EC27849329B3</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

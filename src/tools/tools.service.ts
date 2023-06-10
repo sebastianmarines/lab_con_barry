@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectConnection } from 'nest-knexjs';
 import { Knex } from 'knex';
-import { Tool } from './tools.model';
+import { Reservation, Tool } from './tools.model';
 
 @Injectable()
 export class ToolsService {
@@ -9,5 +9,11 @@ export class ToolsService {
 
   async findAll(): Promise<Array<Tool>> {
     return this.knex('Herramienta').select('*');
+  }
+
+  async createReservation(reservation: Reservation): Promise<boolean> {
+    const [ID] = await this.knex<Reservation>('Reserva').insert(reservation);
+
+    return true;
   }
 }

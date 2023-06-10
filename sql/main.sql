@@ -50,13 +50,13 @@ VALUES ('Martillo', 'Juan', 'Perez', 'Garcia', 10),
 
 CREATE TABLE Reserva
 (
+    ID                 INT IDENTITY PRIMARY KEY NOT NULL,
     Matricula          VARCHAR(15),
     ID_Herramienta     INT,
     Estatus_activo     bit,
     Fecha_hora_reserva DATETIME,
     Fecha_hora_regreso DATETIME,
     Cantidad           INT,
-    PRIMARY KEY (Matricula, ID_Herramienta),
     FOREIGN KEY (Matricula) REFERENCES Alumno (Matricula),
     FOREIGN KEY (ID_Herramienta) REFERENCES Herramienta (ID_Herramienta)
 );
@@ -64,7 +64,6 @@ CREATE TABLE Reserva
 INSERT INTO Reserva (Matricula, ID_Herramienta, Estatus_activo, Fecha_hora_reserva, Fecha_hora_regreso, Cantidad)
 VALUES ('A01383056', 1, 1, '2023-06-05 10:00:00', '2023-06-06 11:00:00', 1);
 
-SELECT * FROM Reserva WHERE
 
 CREATE TABLE Alumnos_Herramientas
 (
@@ -77,3 +76,6 @@ CREATE TABLE Alumnos_Herramientas
     FOREIGN KEY (Matricula) REFERENCES Alumno (Matricula),
     FOREIGN KEY (ID_Herramienta) REFERENCES Herramienta (ID_Herramienta)
 );
+
+ALTER TABLE Reserva
+    ADD ID_Alumno INT FOREIGN KEY REFERENCES Alumno (ID);

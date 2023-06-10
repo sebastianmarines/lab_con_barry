@@ -105,16 +105,16 @@
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Reserva de máquinas</h3>
 
-            <form class="px-md-2">
+            <form class="px-md-2" action="/tools/reservation" method="POST">
               <div class="form-outline mb-4">
-                <input type="text" id="form3Example1q" class="form-control" />
+                <input type="text" id="form3Example1q" class="form-control" name="Matricula" />
                 <label class="form-label" for="form3Example1q">Matrícula</label>
               </div>
 
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <label for="startDate">Fecha de reservación</label>
-                  <input id="startDate" class="form-control" type="date" />
+                  <input id="startDate" class="form-control" type="date" name="Fecha_reserva" />
                   <span id="startDateSelected"></span>
                 </div>
               </div>
@@ -122,17 +122,13 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <label for="hora_inicio_pedido">Hora de reservación</label>
-                  <input id="hora_inicio_pedido" class="form-control" type="time" />
+                  <input id="hora_inicio_pedido" class="form-control" type="time" name="Hora_reserva" />
                   <span id="hora_inicio_seleccionada"></span>
                 </div>
               </div>
 
               <div class="mb-4">
-                <select class="select" name="tool_id">
-                  <!--                  <option value="1" disabled>Nombre de la máquina</option>-->
-                  <!--                  <option value="2">Fresadora</option>-->
-                  <!--                  <option value="3">Algo mas</option>-->
-                  <!--                  <option value="4">Otro</option>-->
+                <select class="select" name="ID_Herramienta">
                   {{#each tools}}
                     <option value="{{this.ID_Herramienta}}">{{this.Nombre}}</option>
                   {{/each}}
