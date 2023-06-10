@@ -8,10 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f2af50a-63ba-4a64-a91d-30abdb8bc2ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/certificates/certificates.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/certificates/detail.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/tools/qr.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/users.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/tools.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/tools.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/users.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/partials/navbar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/register.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/register.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,34 +86,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/sebastianmarines/Projects/tec/lab_con_barry",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/sebastianmarines/Projects/tec/lab_con_barry/node_modules/prettier",
-    "rearrange.code.on.save": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/sebastianmarines/Projects/tec/lab_con_barry/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sebastianmarines/Projects/tec/lab_con_barry&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/sebastianmarines/Projects/tec/lab_con_barry/node_modules/prettier&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/sebastianmarines/Projects/tec/lab_con_barry/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -174,7 +181,8 @@
       <workItem from="1685767159884" duration="5109000" />
       <workItem from="1685932842406" duration="490000" />
       <workItem from="1685933340917" duration="215000" />
-      <workItem from="1685933564484" duration="18587000" />
+      <workItem from="1685933564484" duration="19625000" />
+      <workItem from="1686423154520" duration="3883000" />
     </task>
     <task id="LOCAL-00001" summary="Connect DB">
       <created>1684854873575</created>
@@ -253,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686175704347</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix">
+      <created>1686176137387</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686176137387</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +314,7 @@
     <MESSAGE value="Create missing tables" />
     <MESSAGE value="Create certificate" />
     <MESSAGE value="Fix forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix forms" />
+    <MESSAGE value="Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
   </component>
 </project>

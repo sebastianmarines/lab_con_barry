@@ -18,6 +18,12 @@ export class UsersService {
     return this.knex(this.tableName).where({ CorreoElectronico }).first();
   }
 
+  async findUserByCertificateId(IdCertificado: number): Promise<User> {
+    return this.knex(this.tableName)
+      .where('ID_Certificado', IdCertificado)
+      .first();
+  }
+
   async createUser(user: User): Promise<User> {
     user.Contrasena = await bcrypt.hash(user.Contrasena, 10);
 

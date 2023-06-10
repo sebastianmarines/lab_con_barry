@@ -6,6 +6,7 @@ import { KnexModule } from 'nest-knexjs';
 import { UsersModule } from './users/users.module';
 import { SessionModule } from 'nestjs-session';
 import { ToolsModule } from './tools/tools.module';
+import { CertificatesModule } from './certificates/certificates.module';
 
 // noinspection TypeScriptValidateTypes
 @Module({
@@ -31,6 +32,7 @@ import { ToolsModule } from './tools/tools.module';
     }),
     UsersModule,
     ToolsModule,
+    CertificatesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

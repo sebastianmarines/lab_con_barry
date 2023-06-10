@@ -10,4 +10,5 @@ export interface User extends UserBase {
   ApellidoPaterno?: string;
   ApellidoMaterno?: string;
   Activo?: boolean;
+  ID_Certificado?: number;
 }
