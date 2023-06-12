@@ -14,4 +14,5 @@ export interface Reservation {
   Fecha_hora_reserva: Date;
   Fecha_hora_regreso?: Date;
   Cantidad: number;
+  Nombre?: string;
 }

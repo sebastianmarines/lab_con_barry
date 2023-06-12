@@ -1,7 +1,9 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
+  Param,
   Post,
   Render,
   Res,
@@ -21,9 +23,11 @@ export class ToolsController {
   @Render('tools/list')
   async findAll(@Session() session): Promise<any> {
     const availableTools = await this.toolsService.findAll();
+    const reservas = await this.toolsService.findAllReservations();
     return {
       tools: availableTools,
       user: session.user,
+      reservas: reservas,
     };
   }
 
@@ -53,5 +57,14 @@ export class ToolsController {
 
     const created = await this.toolsService.createReservation(reserva);
     res.redirect('/tools');
+  }
+
+  @Delete('/reservation/:id')
+  async deleteReservation(
+    @Session() session,
+    @Param('id') id: number,
+  ): Promise<any> {
+    const deleted = await this.toolsService.returnReservation(id);
+    return '';
   }
 }

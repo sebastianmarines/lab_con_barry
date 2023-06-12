@@ -1,56 +1,56 @@
-.image{
+.image {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.blue-text{
-    color:#1b2743;
+.blue-text {
+    color: #1b2743;
     font-family: 'Comic Neue', cursive;
 }
 
-.imagen-principal{
+.imagen-principal {
     display: flex;
     justify-content: center;
     width: 100%;
     max-width: 1000px;
 }
 
-.imagen-recursos{
+.imagen-recursos {
     display: flex;
     justify-content: center;
     width: 100%;
     max-width: 700px;
 }
 
-.imagen-centrada{
+.imagen-centrada {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.text{
+.text {
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 
-.background-nb{
+.background-nb {
     background-color: #293e6b;
-    
+
 }
 
-.img-pequena{
+.img-pequena {
     width: 30%;
     display: block;
     margin: auto;
 }
 
-.fondo-pp{
-background-color: #fdfcf3;
+.fondo-pp {
+    background-color: #fdfcf3;
 }
 
-.borde-recursos{
+.borde-recursos {
     border: 20px solid #FF9600;
     box-shadow: 5px 10px 8px #888888;
 }
@@ -59,4 +59,9 @@ background-color: #fdfcf3;
     border-bottom-right-radius: 30%;
     border-bottom-left-radius: 30%;
     width: 100%;
+}
+
+tr.htmx-swapping td {
+    opacity: 0;
+    transition: opacity 1s ease-out;
 }
