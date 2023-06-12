@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Post, Render } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Post,
+  Render,
+  Res,
+  Session,
+} from '@nestjs/common';
 import { ToolsService } from './tools.service';
 
 import * as QRCode from 'qrcode';
@@ -11,25 +19,28 @@ export class ToolsController {
 
   @Get()
   @Render('tools/list')
-  async findAll(): Promise<any> {
+  async findAll(@Session() session): Promise<any> {
     const availableTools = await this.toolsService.findAll();
     return {
       tools: availableTools,
+      user: session.user,
     };
   }
 
   @Get('qr')
   @Render('tools/qr')
-  async getQR(): Promise<any> {
+  async getQR(@Session() session): Promise<any> {
     const qr = await QRCode.toDataURL('https://www.google.com');
     return {
       qr: qr,
+      user: session.user,
     };
   }
 
   @Post('/reservation')
   async createReservation(
     @Body() reservation: ReservationCreationDto,
+    @Res() res,
   ): Promise<any> {
     const reserva: Reservation = {
       ID_Herramienta: reservation.ID_Herramienta,
@@ -41,8 +52,6 @@ export class ToolsController {
     };
 
     const created = await this.toolsService.createReservation(reserva);
-    return {
-      created: created,
-    };
+    res.redirect('/tools');
   }
 }
