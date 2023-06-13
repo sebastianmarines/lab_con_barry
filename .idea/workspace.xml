@@ -8,13 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f2af50a-63ba-4a64-a91d-30abdb8bc2ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/certificates/certificates.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/estilos/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/estilos/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/tools.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/tools.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/tools.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/tools.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/tools.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/tools.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/certificates/certificates.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/certificates/certificates.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/certificates/certificates.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/certificates/certificates.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/certificates/certificates.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/certificates/certificates.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tools/list.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/tools/list.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/recursos.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/recursos.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +179,7 @@
       <workItem from="1685932842406" duration="490000" />
       <workItem from="1685933340917" duration="215000" />
       <workItem from="1685933564484" duration="19625000" />
-      <workItem from="1686423154520" duration="11431000" />
+      <workItem from="1686423154520" duration="15055000" />
     </task>
     <task id="LOCAL-00001" summary="Connect DB">
       <created>1684854873575</created>
@@ -285,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686575727954</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Delete reservations">
+      <created>1686577415113</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1686577415114</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +343,7 @@
     <MESSAGE value="Generate certificates" />
     <MESSAGE value="Create reservations" />
     <MESSAGE value="Redirect on tool form success" />
-    <option name="LAST_COMMIT_MESSAGE" value="Redirect on tool form success" />
+    <MESSAGE value="Delete reservations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete reservations" />
   </component>
 </project>

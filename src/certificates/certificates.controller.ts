@@ -1,8 +1,10 @@
 import {
+  Body,
   Controller,
   Get,
   HttpException,
   Param,
+  Post,
   Render,
   Session,
 } from '@nestjs/common';
@@ -10,6 +12,7 @@ import { CertificatesService } from './certificates.service';
 import { UsersService } from '../users/users.service';
 
 import * as QRCode from 'qrcode';
+import { CertificateCreationDto } from './certificates.dto';
 
 @Controller('certificates')
 export class CertificatesController {
@@ -70,5 +73,12 @@ export class CertificatesController {
       user: user,
       qr: qr,
     };
+  }
+
+  @Post('')
+  async createCertificate(
+    @Body() certificateBody: CertificateCreationDto,
+  ): Promise<any> {
+    return await this.certificatesService.create(certificateBody.Matricula);
   }
 }

@@ -55,6 +55,22 @@
     box-shadow: 5px 10px 8px #888888;
 }
 
+.borde-recursos1 {
+    border: 20px solid #FF9600;
+}
+
+.borde-recursos2 {
+    border: 20px solid #FD979F;
+}
+
+.borde-recursos3 {
+    border: 20px solid #2D8D9D;
+}
+
+.borde-recursos4 {
+    border: 20px solid #F35924;
+}
+
 .imagen-curva {
     border-bottom-right-radius: 30%;
     border-bottom-left-radius: 30%;
