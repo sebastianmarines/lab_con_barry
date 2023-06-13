@@ -127,13 +127,20 @@
                 </div>
               </div>
 
-              <div class="mb-4">
-                <select class="select" name="ID_Herramienta">
-                  {{#each tools}}
-                    <option value="{{this.ID_Herramienta}}">{{this.Nombre}}</option>
-                  {{/each}}
-                </select>
-
+              <!--              <div class="mb-4">-->
+              <!--                <select class="select" name="ID_Herramienta">-->
+              <!--                  {{#each tools}}-->
+              <!--                    <option value="{{this.ID_Herramienta}}">{{this.Nombre}}</option>-->
+              <!--                  {{/each}}-->
+              <!--                </select>-->
+              <!--              </div>-->
+              <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <label class="form-label" for="formularioHerramienta">Código de la herramienta</label>
+                    <input type="text" id="formularioHerramienta" class="form-control" name="ID_Herramienta">
+                  </div>
+                </div>
               </div>
 
 
@@ -175,7 +182,7 @@
           <p class="fw-normal mb-1">{{this.Matricula}}</p>
         </td>
         <td>
-          <p class="fw-normal mb-1">{{this.Nombre}}</p>
+          <p class="fw-normal mb-1">{{this.ID_Herramienta}}</p>
         </td>
         <td>
           <p class="fw-normal mb-1">{{this.Fecha_hora_reserva}}</p>

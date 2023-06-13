@@ -19,9 +19,6 @@ export class ToolsService {
 
   async findAllReservations(): Promise<Array<Reservation>> {
     return this.knex('Reserva')
-      .join('Herramienta', function () {
-        this.on('Reserva.ID_Herramienta', '=', 'Herramienta.ID_Herramienta');
-      })
       .where('Reserva.Fecha_hora_regreso', null)
       .select('*');
   }
