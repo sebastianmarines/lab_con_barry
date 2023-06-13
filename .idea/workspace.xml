@@ -8,9 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f2af50a-63ba-4a64-a91d-30abdb8bc2ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7191e788-5e41-4343-817f-e3507f5d7b10/storage_v2/_src_/database/LabConBarry.xdEyZQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7191e788-5e41-4343-817f-e3507f5d7b10/storage_v2/_src_/database/LabConBarry.xdEyZQ/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7191e788-5e41-4343-817f-e3507f5d7b10/storage_v2/_src_/database/reto.7ls1AA/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7191e788-5e41-4343-817f-e3507f5d7b10/storage_v2/_src_/database/reto.7ls1AA/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d608e186-2c47-42d9-ad16-8e1eff1342fc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d608e186-2c47-42d9-ad16-8e1eff1342fc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d608e186-2c47-42d9-ad16-8e1eff1342fc/storage_v2/_src_/database/master.YiqNvw/schema/guest.2C3iBQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d608e186-2c47-42d9-ad16-8e1eff1342fc/storage_v2/_src_/database/master.YiqNvw/schema/guest.2C3iBQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/certificates/certificates.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/certificates/certificates.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/videogame.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/videogame.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/videojuego_frame.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/videojuego_frame.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +179,8 @@
       <workItem from="1685932842406" duration="490000" />
       <workItem from="1685933340917" duration="215000" />
       <workItem from="1685933564484" duration="19625000" />
-      <workItem from="1686423154520" duration="16258000" />
+      <workItem from="1686423154520" duration="18962000" />
+      <workItem from="1686637073229" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="Connect DB">
       <created>1684854873575</created>
@@ -295,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686623161171</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Dynamic certificate URLs">
+      <created>1686624184342</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1686624184342</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,6 +360,7 @@
     <MESSAGE value="Redirect on tool form success" />
     <MESSAGE value="Delete reservations" />
     <MESSAGE value="Create certificate endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create certificate endpoint" />
+    <MESSAGE value="Dynamic certificate URLs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dynamic certificate URLs" />
   </component>
 </project>
