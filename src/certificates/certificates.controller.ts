@@ -36,8 +36,11 @@ export class CertificatesController {
       throw new HttpException('Certificado no encontrado', 404);
     }
 
+    const url = process.env.LOCAL
+      ? 'http://localhost:3000'
+      : 'http://54.90.232.18:3000';
     const qr = await QRCode.toDataURL(
-      `http://localhost:3000/certificates/${certificate.ID_Certificado}`,
+      `${url}/certificates/${certificate.ID_Certificado}`,
     );
 
     return {
@@ -63,10 +66,10 @@ export class CertificatesController {
     }
 
     const user = await this.usersService.findUserByCertificateId(_id);
-
-    const qr = await QRCode.toDataURL(
-      `http://localhost:3000/certificates/${_id}`,
-    );
+    const url = process.env.LOCAL
+      ? 'http://localhost:3000'
+      : 'http://54.90.232.18:3000';
+    const qr = await QRCode.toDataURL(`${url}/certificates/${_id}`);
 
     return {
       certificate: certificate,

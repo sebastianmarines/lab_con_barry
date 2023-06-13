@@ -33,7 +33,15 @@
             <node kind="database" qname="@">
               <node kind="schema" qname="@" />
             </node>
-            <node kind="database" qname="LabConBarry" />
+            <node kind="database" qname="LabConBarry">
+              <node kind="schema" qname="dbo" />
+            </node>
+            <node kind="database" qname="master">
+              <node kind="schema">
+                <name qname="dbo" />
+                <name qname="guest" />
+              </node>
+            </node>
           </node>
         </introspection-scope>
       </schema-mapping>
