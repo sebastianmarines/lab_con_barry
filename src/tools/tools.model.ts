@@ -16,3 +16,12 @@ export interface Reservation {
   Cantidad: number;
   Nombre?: string;
 }
+
+export interface ReservationMaquina {
+  ID_Maquina: number;
+  Matricula: string;
+  Fecha_hora_reserva: Date;
+  Fecha_hora_regreso?: Date;
+  Cantidad: number;
+  Nombre?: string;
+}

@@ -79,3 +79,15 @@ CREATE TABLE Alumnos_Herramientas
 
 ALTER TABLE Reserva
     ADD ID_Alumno INT FOREIGN KEY REFERENCES Alumno (ID);
+
+CREATE TABLE ReservaMaquina
+(
+    ID                 INT IDENTITY PRIMARY KEY NOT NULL,
+    Matricula          VARCHAR(15),
+    ID_Maquina         INT,
+    Estatus_activo     bit,
+    Fecha_hora_reserva DATETIME,
+    Fecha_hora_regreso DATETIME,
+    Cantidad           INT,
+    FOREIGN KEY (Matricula) REFERENCES Alumno (Matricula),
+);

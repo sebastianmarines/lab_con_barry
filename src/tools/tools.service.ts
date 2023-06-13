@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectConnection } from 'nest-knexjs';
 import { Knex } from 'knex';
-import { Reservation, Tool } from './tools.model';
+import { Reservation, ReservationMaquina, Tool } from './tools.model';
 
 @Injectable()
 export class ToolsService {
@@ -25,6 +25,30 @@ export class ToolsService {
 
   async returnReservation(ID_Reserva: number): Promise<boolean> {
     await this.knex<Reservation>('Reserva')
+      .where('ID', ID_Reserva)
+      .update({ Fecha_hora_regreso: new Date() });
+
+    return true;
+  }
+
+  async createReservationMaquina(
+    reservation: ReservationMaquina,
+  ): Promise<boolean> {
+    const [ID] = await this.knex<ReservationMaquina>('ReservaMaquina').insert(
+      reservation,
+    );
+
+    return true;
+  }
+
+  async findAllReservationsMaquinas(): Promise<Array<ReservationMaquina>> {
+    return this.knex('ReservaMaquina')
+      .where('ReservaMaquina.Fecha_hora_regreso', null)
+      .select('*');
+  }
+
+  async returnReservationMaquina(ID_Reserva: number): Promise<boolean> {
+    await this.knex<ReservationMaquina>('ReservaMaquina')
       .where('ID', ID_Reserva)
       .update({ Fecha_hora_regreso: new Date() });
 
