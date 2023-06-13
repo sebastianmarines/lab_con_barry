@@ -8,14 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f2af50a-63ba-4a64-a91d-30abdb8bc2ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/views/tools/maquinas.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/main.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/main.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/tools.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/tools.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/tools.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/tools.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/tools.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/tools.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/partials/navbar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tools/list.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/tools/list.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +174,7 @@
       <workItem from="1685933340917" duration="215000" />
       <workItem from="1685933564484" duration="19625000" />
       <workItem from="1686423154520" duration="18962000" />
-      <workItem from="1686637073229" duration="3725000" />
+      <workItem from="1686637073229" duration="3907000" />
     </task>
     <task id="LOCAL-00001" summary="Connect DB">
       <created>1684854873575</created>
@@ -330,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686645344150</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Create machines registration">
+      <created>1686646082978</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1686646082978</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,6 +386,7 @@
     <MESSAGE value="Fix CORS" />
     <MESSAGE value="Fix typo" />
     <MESSAGE value="Fix tools registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix tools registration" />
+    <MESSAGE value="Create machines registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create machines registration" />
   </component>
 </project>
